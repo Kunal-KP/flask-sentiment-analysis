@@ -1,0 +1,15 @@
+{% extends "header.html" %}
+{% block content %}
+      <div class="center-div">
+        <h1>How did you like the movie?</h1>
+       <form method="POST" action = "/result"> <!-- Form for data submission, method post -->
+         <div class = "form-group pt10">
+           <textarea style="width:500px;" rows="2" name = "review_text" placeholder="Please enter your review..."></textarea>
+
+           <!-- <input type="textarea" name = "review_text">  -->
+         </div>
+         <input class="btn btn-primary" type="submit" value="submit">
+       </form>
+       <img class="pt10" src="{{url_for('static', filename='logo.png')}}"/>
+      </div>
+{% endblock %}

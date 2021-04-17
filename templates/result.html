@@ -1,0 +1,32 @@
+{% extends "header.html" %}
+{% block content %}
+<div class="center-div">
+    <h1>The predicted sentiment of your review: </h1>
+    <br/>
+    <h2>" {{review}} " is : </h2>
+    {% if sentiment == 'Positive' %}
+        <img class="pt10" src="{{url_for('static', filename='positive.png')}}"/>
+    {% else %}
+        <img class="pt10" src="{{url_for('static', filename='negative.png')}}"/>
+    {% endif %}
+    <form method="POST" action = "/feedback">
+        <div class="pt20">
+            <h1>Is the prediction correct or wrong? </h1>
+            <input type="hidden" id="review_id" name="review_id" value={{review_id}}>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="feedback_val" value="Correct">Correct
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="feedback_val" value="Wrong">Wrong
+                </label>
+            </div>
+            <div class="pt10">
+                <input class="btn btn-primary" type="submit" value="submit">
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

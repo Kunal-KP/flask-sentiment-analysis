@@ -1,0 +1,46 @@
+/* body {
+    background-image: url("logo.png") ;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+   } */
+
+   .nav-item a{
+    color: white !important;
+    font-size: 2em !important;
+    padding-right: 20px !important;
+    }
+
+    .nav-link {
+        color: white !important;
+    }
+
+    .center-div {
+        height: 100%;
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    .white-text {
+        color: white !important;
+    }
+
+    .pt10 {
+        padding-top: 10px;
+    }
+
+    .pt30 {
+        padding-top: 30px;
+    }
+
+    .pb10 {
+        padding-bottom: 10px;
+    }
+
+    table {
+        margin: auto;
+    }
+
+    table td {
+        padding: 10px!important
+    }

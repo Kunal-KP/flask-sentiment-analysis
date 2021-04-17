@@ -1,0 +1,24 @@
+{% extends "header.html" %}
+{% block content %}
+<div class="center-div">
+   <h1 class="pb10">Data fetched Successfully</h1>
+      <table class="pt10" border = 1>
+         <thead>
+            <td><b>Movie Review</b></td>
+             <td><b>Sentiment</b></td>
+             <td><b>Feedback</b></td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["movie_review"]}}</td>
+               <td>{{row["sentiment"]}}</td>
+               {% if row["feedback"] == None %}
+                  <td>NA</td>
+               {% else %}
+                  <td>{{row["feedback"]}}</td>
+               {% endif %}
+            </tr>
+         {% endfor %}
+      </table>
+{% endblock %}
